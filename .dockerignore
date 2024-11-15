@@ -1,0 +1,19 @@
+# Ignorando testes:
+/src/test/
+
+#ignorando arquivos do intellij e git
+.idea/
+.git*
+
+#ignorando sql
+bd_maromo.sql
+
+#ignorando build artifacts
+target/
+
+#todos os markdown possíveis
+*.md
+
+#Ignorando Maven wrapper
+mvwn*
+.mvn/
