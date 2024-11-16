@@ -37,6 +37,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/filme/todos").permitAll()
                         .requestMatchers(HttpMethod.GET, "/diretor/todos","/filme/diretor/","/filme/nome/","/filme/score/","/filme/todos").hasAnyAuthority("USER","ADMIN")
                         .anyRequest().hasAuthority("ADMIN")//authenticated()
                 )
