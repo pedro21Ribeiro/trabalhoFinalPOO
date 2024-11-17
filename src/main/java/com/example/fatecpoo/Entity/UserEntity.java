@@ -1,6 +1,7 @@
 package com.example.fatecpoo.Entity;
 
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,11 +11,13 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(description = "Entidade que representa um usuário do sistema.")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_usuario")
+    @Schema(description = "ID único do usuário", example = "1")
     private Integer id;
 
 

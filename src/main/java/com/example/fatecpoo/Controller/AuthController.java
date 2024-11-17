@@ -7,7 +7,6 @@ import com.example.fatecpoo.Entity.UserEntity;
 import com.example.fatecpoo.Exceptions.EmptyFieldException;
 import com.example.fatecpoo.Exceptions.IncorrectPassoword;
 import com.example.fatecpoo.Exceptions.RegisterNotFound;
-import com.example.fatecpoo.Exceptions.SuccessfulAuthentication;
 import com.example.fatecpoo.Infra.Security.TokenService;
 import com.example.fatecpoo.Repository.UserRepository;
 import com.example.fatecpoo.Service.Impl.UserServiceImpl;
@@ -54,7 +53,7 @@ public class AuthController {
 
         if (passwordEncoder.matches(body.senha(), userEntity.getSenha())) {
             String token = this.tokenService.generateToken(userEntity);
-            throw new SuccessfulAuthentication("Autenticação bem-sucedida. Token: " + token);
+            return ResponseEntity.ok("Autenticação bem-sucedida. Token: " + token);
         }
         throw new IncorrectPassoword();
         //return ResponseEntity.badRequest().body("Senha incorreta");
