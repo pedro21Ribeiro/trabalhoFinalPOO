@@ -2,6 +2,7 @@ package com.example.fatecpoo.Entity;
 
 
 import com.example.fatecpoo.DTO.DiretorDTO.DiretorDTO;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import org.springframework.beans.BeanUtils;
 @Table(name="tb_Diretor")
 @Getter
 @Setter
+@Schema(description = "Entidade que representa um diretor do sistema.")
 public class DiretorEntity {
 
     @Id

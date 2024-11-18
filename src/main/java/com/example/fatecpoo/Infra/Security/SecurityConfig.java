@@ -1,6 +1,8 @@
 package com.example.fatecpoo.Infra.Security;
 
 import com.example.fatecpoo.Infra.Security.Impl.CustomUserDetailsServiceImpl;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +19,15 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@SecurityScheme(
+        name = "bearerAuth",
+        type = SecuritySchemeType.HTTP,
+        scheme = "bearer",
+        bearerFormat = "JWT"
+)
 public class SecurityConfig {
+
+    public static final String SECURITY = "bearerAuth";
 
     private CustomUserDetailsServiceImpl customUserDetailsService;
 
@@ -37,8 +47,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/filme/todos").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/diretor/todos","/filme/diretor/","/filme/nome/","/filme/score/","/filme/todos").hasAnyAuthority("USER","ADMIN")
+                        .requestMatchers("/v3/api-docs/**", "swagger-ui/**", "swagger-ui.html").permitAll()
+                        .requestMatchers(HttpMethod.GET).hasAnyAuthority("USER","ADMIN")
                         .anyRequest().hasAuthority("ADMIN")//authenticated()
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class);

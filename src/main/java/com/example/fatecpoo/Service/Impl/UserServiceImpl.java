@@ -3,11 +3,12 @@ package com.example.fatecpoo.Service.Impl;
 import com.example.fatecpoo.DTO.UserDTO.UserDTO;
 import com.example.fatecpoo.DTO.UserDTO.UserRegisterRequestDTO;
 import com.example.fatecpoo.Entity.UserEntity;
+import com.example.fatecpoo.Exceptions.EmailAlreadyExists;
+import com.example.fatecpoo.Exceptions.EmptyFieldException;
 import com.example.fatecpoo.Infra.Security.TokenService;
 import com.example.fatecpoo.Repository.UserRepository;
 import com.example.fatecpoo.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,11 @@ public class UserServiceImpl implements UserService {
 
         // Caso o usuário ainda não exista
         if (userEntityOptional.isEmpty()) {
+            if(request.getEmail().isEmpty() || request.getSenha().isEmpty() || request.getRole().isEmpty() || request.getNome().isEmpty()) {
+                throw new EmptyFieldException("Os campos nome, email, senha e role são obrigatorios");
+            }
             UserEntity newUser = new UserEntity();
+
             newUser.setSenha(passwordEncoder.encode(request.getSenha()));
             newUser.setEmail(request.getEmail());
             newUser.setNome(request.getNome());
@@ -48,10 +53,10 @@ public class UserServiceImpl implements UserService {
             String token = this.tokenService.generateToken(newUser);
             return new UserDTO(newUser.getId(), newUser.getNome(), newUser.getEmail(), newUser.getRole());
         }
-
+        throw new EmailAlreadyExists();
         // Caso o usuário já exista
-        UserEntity existingUser = userEntityOptional.get();
-        return new UserDTO(existingUser.getId(), existingUser.getNome(), existingUser.getEmail(), existingUser.getRole());
+        // UserEntity existingUser = userEntityOptional.get();
+        // return new UserDTO(existingUser.getId(), existingUser.getNome(), existingUser.getEmail(), existingUser.getRole());
     }
 
 
