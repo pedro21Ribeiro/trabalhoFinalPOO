@@ -2,11 +2,13 @@ package com.example.fatecpoo.Controller;
 
 import com.example.fatecpoo.DTO.DiretorDTO.DiretorDTO;
 import com.example.fatecpoo.DTO.FilmeDTO.FilmeDTO;
+import com.example.fatecpoo.Infra.Security.SecurityConfig;
 import com.example.fatecpoo.Service.Impl.DiretorServiceImpl;
 import com.example.fatecpoo.Service.Impl.FilmeServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/filme")
 @Tag(name = "Filme", description = "Controller para a inserção, alteração, consulta e deleção de filmes.")
+@SecurityRequirement(name = SecurityConfig.SECURITY)
 public class FilmeController {
     private FilmeServiceImpl filmeServiceImpl;
 
