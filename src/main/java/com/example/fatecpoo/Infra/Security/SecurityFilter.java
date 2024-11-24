@@ -35,12 +35,6 @@ public class SecurityFilter extends OncePerRequestFilter {
         var token = this.recoverToken(request);
         var login = tokenService.validateToken(token);
 
-        String requestUri = request.getRequestURI();
-        if (requestUri.equals("/") ||  requestUri.startsWith("/swagger")) {
-        filterChain.doFilter(request, response);
-        return;
-        }
-
         if(login != null ){
             UserEntity userEntity = userRepository.findByEmail(login).
                     orElseThrow(() -> new RuntimeException("Usuario não encontrado"));
