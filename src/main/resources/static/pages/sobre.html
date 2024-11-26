@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Movie List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/output.css'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonte gugi do google para usar no projeto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+<body class="bg-slate-950 gugi-regular text-white">
+    <nav class="bg-black w-full mb-12">
+        <div class="container mx-auto justify-between flex">
+            <a href="/">
+                <h1 class="py-3 text-4xl">MY MOVIE LIST</h1>
+            </a>
+            <ul class="my-auto flex space-x-4 text-2xl">
+                <li>
+                    <a href="/swagger-ui/index.html" class="transition-colors ease-in-out delay-100 duration-200 hover:text-blue-800">
+                        <h1>Documentação</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="transition-colors ease-in-out delay-100 duration-200 hover:text-blue-800">
+                        <h1>Sobre</h1>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="mx-auto max-w-screen-lg space-y-24 pb-6">
+        <div class="flex justify-center text-5xl">
+            <h1>Sobre</h1>
+        </div>
+
+        <div class="text-lg px-8 md:px-13 font-sans">
+            <p class="text-center">
+                A API MyMovieList foi desenvolvida como parte de um projeto acadêmico na Fatec Mogi Mirim, com foco em oferecer
+                uma solução prática e eficiente para consulta de filmes, diretores e sinopses.
+                Construída com Spring Boot, a API aplica boas práticas de desenvolvimento e segurança, como autenticação JWT e
+                versionamento de código, além de contar com suporte a contêineres e hospedagem em nuvem.
+                Nosso objetivo é combinar tecnologia moderna com simplicidade para entregar uma experiência funcional e bem
+                estruturada.
+            </p>
+        </div>
+
+        <div class="flex justify-center text-5xl">
+            <h1>Integrantes</h1>
+        </div>
+
+        <div>
+            <ul class="flex flex-row justify-evenly">
+                <li class="flex flex-col justify-center">
+                    <img class="mx-auto rounded-full w-36" src="../images/Eder.jpeg" alt="Foto de perfil do Eder Pedro Venâncio">
+                    <h3 class="text-left">Eder Pedro Venâncio</h3>
+                </li>
+                <li class="flex flex-col justify-center">
+                    <img class="mx-auto rounded-full w-36" src="../images/Moises.jpeg" alt="Foto de perfil do Moises de oliveira Sampaio">
+                    <h3 class="text-left">Moises de Oliveira Sampaio</h3>
+                </li>
+                <li class="flex flex-col justify-center">
+                    <img class="mx-auto rounded-full w-36 h-36" src="../images/noImageAvailabe.jpeg" alt="Foto de perfil da Mariane Oliveira dos Santos">
+                    <h3 class="text-left">Mariane Oliveira dos Santos</h3>
+                </li>
+                <li class="flex flex-col justify-center">
+                    <img class="mx-auto rounded-full w-36 h-36" src="../images/Pedro.png" alt="Foto de perfil do Pedro Silva Ribeiro">
+                    <h3 class="text-left">Pedro Silva Ribeiro</h3>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="flex justify-center text-5xl">
+            <h1>Tecnologias Utilizadas</h1>
+        </div>
+
+        <div class="grid grid-cols-6">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+            <img class="size-24" src="../images/docker-svgrepo-com.svg" alt="imagem do docker">
+        </div>
+            
+    </div>
+    
+</body>
+</html>
