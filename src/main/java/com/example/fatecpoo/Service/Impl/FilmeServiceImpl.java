@@ -42,6 +42,9 @@ public class FilmeServiceImpl implements FilmeService {
     }
 
     public FilmeDTO saveMovie(FilmeDTO filme){
+        if(filmeRepository.existsByNomeFilme(filme.getNomeFilme())){
+            throw new RegisterNotFound("Já Existe um filme com esse nome");
+        }
         FilmeEntity filmeEntity = new FilmeEntity(filme);
         FilmeEntity savedFilme = filmeRepository.save(filmeEntity);
         return new FilmeDTO(savedFilme);

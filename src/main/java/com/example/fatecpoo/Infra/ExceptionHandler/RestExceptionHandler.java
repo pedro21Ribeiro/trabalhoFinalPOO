@@ -30,5 +30,10 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(exception.getMessage());
     }
 
+    @ExceptionHandler(DuplicateRegistry.class)
+    private ResponseEntity<String> duplicateRegistryException(DuplicateRegistry exception){
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(exception.getMessage());
+    }
+
 
 }

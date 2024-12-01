@@ -20,7 +20,7 @@ public class DiretorEntity {
     @Column(name = "id_diretor")
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(name = "nome_diretor", nullable = false)
     private String nomeDiretor;
 
     @Column(nullable = false)
@@ -35,5 +35,9 @@ public class DiretorEntity {
     }
 
 
-
+    public DiretorEntity(Integer id, String nomeDiretor, String dataNascimentoDiretor) {
+        this.id = id;
+        this.nomeDiretor = nomeDiretor;
+        this.dataNascimentoDiretor = dataNascimentoDiretor;
+    }
 }

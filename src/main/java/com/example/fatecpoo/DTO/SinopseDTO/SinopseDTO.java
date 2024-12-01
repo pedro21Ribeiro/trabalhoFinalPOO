@@ -31,4 +31,8 @@ public class SinopseDTO {
 
     public SinopseDTO(){}
 
+    public SinopseDTO(Integer id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
 }
