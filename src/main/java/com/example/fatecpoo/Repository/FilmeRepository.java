@@ -11,5 +11,6 @@ public interface FilmeRepository extends JpaRepository<FilmeEntity, Integer> {
     List<FilmeEntity> findByDiretorNomeDiretorContaining(String nomeDiretor);
     List<FilmeEntity> findByNomeFilmeContaining(String nomeFilme);
     List<FilmeEntity> findByScoreFilmeEquals(Double scoreFilme);
+    boolean existsByNomeFilme(String nome);
 
 }

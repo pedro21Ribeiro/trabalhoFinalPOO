@@ -29,6 +29,11 @@ public class SinopseEntity {
     }
 
     public SinopseEntity(){}
+
+    public SinopseEntity(Integer id, String descricao) {
+        this.id = id;
+        this.descricao = descricao;
+    }
 }
 
 

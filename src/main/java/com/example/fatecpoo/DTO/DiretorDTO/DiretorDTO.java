@@ -29,6 +29,9 @@ public class DiretorDTO {
 
     public DiretorDTO(){}
 
-
-
+    public DiretorDTO(Integer id, String nomeDiretor, String dataNascimentoDiretor) {
+        this.id = id;
+        this.nomeDiretor = nomeDiretor;
+        this.dataNascimentoDiretor = dataNascimentoDiretor;
+    }
 }

@@ -2,10 +2,12 @@ package com.example.fatecpoo.Controller;
 
 
 import com.example.fatecpoo.DTO.SinopseDTO.SinopseDTO;
+import com.example.fatecpoo.Infra.Security.SecurityConfig;
 import com.example.fatecpoo.Service.Impl.SinopseServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/sinopse")
 @Tag(name = "Sinopse", description = "Controller para a pesquisa, inserção, alteração e deleção de sinopses.")
+@SecurityRequirement(name = SecurityConfig.SECURITY)
 public class SinopseController {
 
     private SinopseServiceImpl sinopseServiceImpl;

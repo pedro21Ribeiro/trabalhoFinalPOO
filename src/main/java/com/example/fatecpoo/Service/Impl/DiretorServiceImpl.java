@@ -3,6 +3,7 @@ package com.example.fatecpoo.Service.Impl;
 
 import com.example.fatecpoo.DTO.DiretorDTO.DiretorDTO;
 import com.example.fatecpoo.Entity.DiretorEntity;
+import com.example.fatecpoo.Exceptions.DuplicateRegistry;
 import com.example.fatecpoo.Exceptions.EmptyFieldException;
 import com.example.fatecpoo.Exceptions.RegisterNotFound;
 import com.example.fatecpoo.Repository.DiretorRepository;
@@ -48,6 +49,10 @@ public class DiretorServiceImpl implements DiretorService {
         if(diretorDTO.getNomeDiretor().isEmpty() || diretorDTO.getDataNascimentoDiretor().isEmpty()){
             throw new EmptyFieldException("O campo Nome Diretor e Data de Nascimento devem ser obrigatoriamente preenchidos");
         }
+        if(diretorRepository.existsByNomeDiretor(diretorDTO.getNomeDiretor())){
+            throw new DuplicateRegistry("Já Existe um diretor com esse nome");
+        }
+
         DiretorEntity diretorEntity = new DiretorEntity(diretorDTO);
         DiretorEntity savedDiretor = diretorRepository.save(diretorEntity);
         return new DiretorDTO(savedDiretor);
