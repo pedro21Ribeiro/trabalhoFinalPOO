@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My Movie List</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/output.css'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonte gugi do google para usar no projeto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+<body class="bg-slate-950 gugi-regular text-white">
+    <nav class="bg-black w-full mb-12">
+        <div class="container mx-auto justify-between flex">
+            <a href="/">
+                <h1 class="py-3 text-4xl">MY MOVIE LIST</h1>
+            </a>
+            <ul class="my-auto flex space-x-4 text-2xl">
+                <li>
+                    <a href="/swagger-ui/index.html" class="transition-colors ease-in-out delay-100 duration-200 hover:text-blue-800">
+                        <h1>Documentação</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pages/sobre.html" class="transition-colors ease-in-out delay-100 duration-200 hover:text-blue-800">
+                        <h1>Sobre</h1>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="mx-auto max-w-screen-lg space-y-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <!-- Texto -->
+            <div class="text-lg px-8 md:px-13 font-sans">
+                <p>
+                    Bem-vindo ao MyMovieList, a sua nova plataforma para explorar o universo do cinema de forma simples e direta.
+                     Inspirada no IMDb, mas com um toque de praticidade, nossa API foca no essencial: filmes, diretores e sinopses.
+                      Sem distrações ou informações desnecessárias, você tem acesso rápido e objetivo aos detalhes que realmente importam.
+                       Ideal para cinéfilos, críticos e curiosos que valorizam uma experiência enxuta e eficiente.
+                        Venha conhecer e deixe o MyMovieList simplificar a forma como você descobre suas próximas obras-primas!
+                </p>
+            </div>
+            
+            <!-- Imagem -->
+            <div class="flex justify-center">
+                <img class="w-10/12 md:w-full max-w-md" src="../images/familia_pipoca.jpg" alt="Família comendo pipoca">
+            </div>
+        </div>
+        <div class="w-full flex justify-center">
+            <a href="https://github.com/pedro21Ribeiro/trabalhoFinalPOO" class="bg-white text-black rounded-3xl py-8 w-6/12 text-center text-5xl">
+                Comece Agora!
+            </a>
+        </div>
+        <hr>
+        <div class="flex justify-center text-5xl">
+            <h1>Exemplos de Queries</h1>
+        </div>
+        <div class="flex flex-col justify-center columns-1 space-y-6">
+            <div>
+                <h1 class="text-2xl mb-3">Buscando filmes por nome</h1>
+                <div class="bg-slate-800 rounded-md text-xl p-2 font-mono">
+                    <h1>
+                        <span class="text-gray-300">></span> my-movie-list.us.kg/filme/nome/Corra
+                    </h1>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3">Buscando por todos os filmes</h1>
+                <div class="bg-slate-800 rounded-md text-xl p-2 font-mono">
+                    <h1>
+                        <span class="text-gray-300">></span> my-movie-list.us.kg/filme/todos
+                    </h1>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3">Buscando filmes por diretor</h1>
+                <div class="bg-slate-800 rounded-md text-xl p-2 font-mono">
+                    <h1>
+                        <span class="text-gray-300">></span> my-movie-list.us.kg/filme/diretor/12
+                    </h1>
+                </div>
+            </div>
+            <div>
+                <h1 class="text-2xl mb-3">Buscando filmes por score</h1>
+                <div class="bg-slate-800 rounded-md text-xl p-2 font-mono">
+                    <h1>
+                        <span class="text-gray-300">></span> my-movie-list.us.kg/filme/score/5
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
