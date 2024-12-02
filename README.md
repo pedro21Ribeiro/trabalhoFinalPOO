@@ -4,7 +4,7 @@
 
 **Considere dar uma estrela ⭐ e compartilhar o nosso projeto!**
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Confira%20essse%20projeto%20no%20github%20https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://github.com/pedro21Ribeiro/trabalhoFinalPOO)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Confira%20essse%20projeto%20no%20github%20https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https%3A%2F%2Fx%2Ecom%2Fintent%2Ftweet%3Ftext%3DCheck%20out%20this%20project%20on%20GitHub%3A%20https%3A%2F%2Fgithub%2Ecom%2Fpedro21Ribeiro%2FtrabalhoFinalPOO%20%23API%20%23Java%20%23Filme%20%23Cloud)
 
 # Índice
 - [Sobre](https://github.com/pedro21Ribeiro/trabalhoFinalPOO#Sobre)
