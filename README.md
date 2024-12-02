@@ -4,19 +4,21 @@
 
 **Considere dar uma estrela ⭐ e compartilhar o nosso projeto!**
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Confira%20essse%20projeto%20no%20github%20https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https%3A%2F%2Fx%2Ecom%2Fintent%2Ftweet%3Ftext%3DCheck%20out%20this%20project%20on%20GitHub%3A%20ttps%3A%2F%2Fgithub%2Ecom%2Fpedro21Ribeiro%2FtrabalhoFinalPOO%20%23API%20%23Java%20%23Filme%20%23Cloud)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/pedro21Ribeiro/trabalhoFinalPOO) [![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)](https://www.reddit.com/submit?title=Confira%20essse%20projeto%20no%20github%20https://github.com/pedro21Ribeiro/trabalhoFinalPOO)
 
 # Índice
+
 - [Sobre](https://github.com/pedro21Ribeiro/trabalhoFinalPOO#Sobre)
 - [Documentação](https://github.com/pedro21Ribeiro/trabalhoFinalPOO#Documentação)
 - [Instalar localmente](https://github.com/pedro21Ribeiro/trabalhoFinalPOO#Instalar-localmente)
 - [Créditos](https://github.com/pedro21Ribeiro/trabalhoFinalPOO#Créditos)
 
-
 # Sobre
-A **API MyMovieList** foi desenvolvida como parte de um projeto acadêmico na **Fatec Mogi Mirim**, com foco em oferecer uma solução prática e eficiente para consulta de filmes, diretores e sinopses. 
+
+A **API MyMovieList** foi desenvolvida como parte de um projeto acadêmico na **Fatec Mogi Mirim**, com foco em oferecer uma solução prática e eficiente para consulta de filmes, diretores e sinopses.
 
 Construída com **Spring Boot**, a API aplica boas práticas de desenvolvimento e segurança, como:
+
 - Autenticação **JWT**;
 - Versionamento de código;
 - Suporte a contêineres;
@@ -28,7 +30,12 @@ Nosso objetivo é combinar **tecnologia moderna** com **simplicidade** para entr
 
 A documentação da API foi feita em Swagger e está disponível de forma online [nesse link](https://my-movie-list.us.kg/swagger-ui/index.html).
 
+Adicionalmente temos o seguinte diagrama de pacotes para facilitar o entendimento da aplicação.
+
+![imagem do diagrama](./gitImages/diagama.jpeg)
+
 # Instalar localmente
+
 A API está disponível ao público a partir da url [my-movie-list.us.kg](https://my-movie-list.us.kg/) porém a aplicação da API está disponível também abertamente no Dockerhub, portanto é possível instalar localmente a API para retirar a latencia entre a nossa API e o banco de dados.
 
 1. Instale Docker usando o passo a passo oficial
@@ -36,6 +43,7 @@ A API está disponível ao público a partir da url [my-movie-list.us.kg](https:
     - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
     - [Linux](https://docs.docker.com/desktop/setup/install/linux/)
 2. Com o Docker instalado e funcionando siga o passo a passo abaixo:
+
 ```bash
 #Abra algum terminal qualquer como bash
 #powershell, cmd, fish ...
@@ -55,7 +63,9 @@ docker logs MyMovieList
 ```
 
 # Créditos
+
 Trabalho realizado por:
+
 - Eder Pedro Venâncio
 - Mariane Oliveira dos Santos
 - Moisés de Oliveira Sampaio
