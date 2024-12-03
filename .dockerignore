@@ -4,6 +4,7 @@
 #ignorando arquivos do intellij e git
 .idea/
 .git*
+gitImages/
 
 #ignorando sql
 bd_maromo.sql
