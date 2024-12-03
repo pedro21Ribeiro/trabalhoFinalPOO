@@ -54,11 +54,11 @@ A API está disponível ao público a partir da url [my-movie-list.us.kg](https:
 docker version
 
 #Baixa a imagem mais atualizada
-docker pull peterpedro01/mymovielist:1.1.0
+docker pull peterpedro01/mymovielist:1.1.2
 
 #Crie um contaier para rodar a imagem
 #Obs:Altere isso  V  para trocar a porta de 80 para uma de sua escolha
-docker run -d -p 80:8080 --name MyMovieList peterpedro01/mymovielist:1.1.0
+docker run -d -p 80:8080 --name MyMovieList peterpedro01/mymovielist:1.1.2
 
 #Aguarde algum tempo e verifique que está funcional a aplicação
 docker logs MyMovieList
